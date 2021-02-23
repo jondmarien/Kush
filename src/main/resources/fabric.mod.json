@@ -14,12 +14,12 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/simplykush/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.timelord.kush.Kush"
+      "com.timelord.simplykush.SimplyKush"
     ]
   },
   "mixins": [
