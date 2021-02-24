@@ -13,9 +13,10 @@ public class ModBlocks {
             .of(Material.BAMBOO)
             .breakByHand(true)
             .strength(0.6F, 3)
-            .sounds(BlockSoundGroup.STONE));
+            .sounds(BlockSoundGroup.STONE)
+    );
 
-    public static void registerBlocks(){
+    public static void registerBlocks() {
         Registry.register(Registry.BLOCK, new Identifier(SimplyKush.MOD_ID, "clay_pot"), CLAY_POT);
     }
 }
