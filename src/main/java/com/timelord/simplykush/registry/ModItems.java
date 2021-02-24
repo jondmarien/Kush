@@ -22,7 +22,7 @@ public class ModItems {
     public static final BlockItem CLAY_POT = new BlockItem(ModBlocks.CLAY_POT, new Item.Settings().group(ItemGroup.MISC));
 
     public static void registerItems(){
-        Registry.register(Registry.ITEM, new Identifier(SimplyKush.MOD_ID, "sativa "), SATIVA);
+        Registry.register(Registry.ITEM, new Identifier(SimplyKush.MOD_ID, "sativa"), SATIVA);
         Registry.register(Registry.ITEM, new Identifier(SimplyKush.MOD_ID, "indica"), INDICA);
         Registry.register(Registry.ITEM, new Identifier(SimplyKush.MOD_ID, "clay_pot"), CLAY_POT);
     }

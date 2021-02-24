@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "SimplyKush:items/indica"
+    "layer0": "simplykush:items/indica"
   }
 }
