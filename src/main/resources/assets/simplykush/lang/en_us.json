@@ -1,5 +1,8 @@
 {
   "item.simplykush.sativa": "Sativa Bud",
   "item.simplykush.indica": "Indica Bud",
+  "item.simplykush.rolling_tray": "Rolling Tray",
+  "item.simplykush.scale": "Scale",
+  "block.simplykush.preparation_desk": "Preparation Desk",
   "block.simplykush.clay_pot": "Clay Pot"
 }

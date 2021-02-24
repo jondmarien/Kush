@@ -3,7 +3,6 @@ package com.timelord.simplykush.registry;
 import com.timelord.simplykush.SimplyKush;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -21,10 +20,12 @@ public class ModItems {
      * Seeds
      */
     public static final Item SEEDS = new Item(new Item.Settings().group(SimplyKush.SIMPLY_KUSH));
+
     /**
      * Block Items
      */
     public static final BlockItem CLAY_POT = new BlockItem(ModBlocks.CLAY_POT, new Item.Settings().group(SimplyKush.SIMPLY_KUSH));
+    public static final BlockItem PREPARATION_DESK = new BlockItem(ModBlocks.PREPARATION_DESK, new Item.Settings().group(SimplyKush.SIMPLY_KUSH));
 
     public static void registerItems() {
         // Items
@@ -38,5 +39,6 @@ public class ModItems {
 
         // Block Items
         Registry.register(Registry.ITEM, new Identifier(SimplyKush.MOD_ID, "clay_pot"), CLAY_POT);
+        Registry.register(Registry.ITEM, new Identifier(SimplyKush.MOD_ID, "preparation_desk"), PREPARATION_DESK);
     }
 }
