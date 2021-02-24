@@ -1,7 +1,6 @@
 package com.timelord.simplykush.registry;
 
 import com.timelord.simplykush.SimplyKush;
-import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
