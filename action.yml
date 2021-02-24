@@ -1,0 +1,15 @@
+name: 'Profile Readme Stats'
+  uses: 'teoxoy/profile-readme-stats@'
+  
+readme:
+  description: 'Path to generated file'
+  required: true
+  default: './README.md'
+includeForks:
+  description: 'Include forked repositories when calculating the stats'
+  required: false
+  default: false
+  
+branding:
+  icon: 'align-justify'
+  color: 'blue'
