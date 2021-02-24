@@ -1,4 +1,4 @@
-package com.timelord.simplykush.registry;
+package com.timelord.simplykush.registry.item;
 
 import net.minecraft.item.Item;
 
