@@ -1,12 +1,14 @@
 {
   "schemaVersion": 1,
-  "id": "kush",
+  "id": "simplykush",
   "version": "${version}",
 
-  "name": "Kush",
-  "description": "Minecraft Kush Mod for Fabric 1.16.5",
+  "name": "Simply Kush",
+  "description": "Minecraft Kush Mod for Fabric 1.16.5. Simply Kush.",
   "authors": [
-    "Timelord/Chronoblaze"
+    "Timelord/Chronoblaze/Nuclearsmilz",
+    "Kohakuu",
+    "Pharrow"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",

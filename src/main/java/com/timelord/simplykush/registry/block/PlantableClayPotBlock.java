@@ -30,19 +30,19 @@ public class PlantableClayPotBlock extends FlowerPotBlock implements Fertilizabl
         setDefaultState(getStateManager().getDefaultState().with(AGE, 0));
     }
 
-    public BlockState withAge(int age){
+    public BlockState withAge(int age) {
         return this.getDefaultState().with(AGE, age);
     }
 
-    public int getMaxAge(){
+    public int getMaxAge() {
         return 3;
     }
 
-    protected int getAge(BlockState bs){
+    protected int getAge(BlockState bs) {
         return bs.get(AGE);
     }
 
-    public boolean isMature(BlockState bs){
+    public boolean isMature(BlockState bs) {
         return bs.get(AGE) >= this.getMaxAge();
     }
 
@@ -54,38 +54,37 @@ public class PlantableClayPotBlock extends FlowerPotBlock implements Fertilizabl
     @Override
     public ActionResult onUse(BlockState bs, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 
-        if(this.getContent() == Blocks.AIR){
+        if (this.getContent() == Blocks.AIR) {
             return super.onUse(bs, world, pos, player, hand, hit);
-        } else if (!this.isMature(bs)){
-            if(player.getMainHandStack().getItem() == Items.BONE_MEAL){
+        } else if (!this.isMature(bs)) {
+            if (player.getMainHandStack().getItem() == Items.BONE_MEAL) {
                 BoneMealItem bmi = (BoneMealItem) player.getMainHandStack().getItem();
                 bmi.useOnBlock(new ItemUsageContext(player, hand, hit));
             }
-        } else if (this.isMature(bs)){
-            if(player.getMainHandStack().getItem() == Items.SHEARS){
-                if(!player.giveItemStack(new ItemStack(this.getContent()))){
+        } else if (this.isMature(bs)) {
+            if (player.getMainHandStack().getItem() == Items.SHEARS) {
+                if (!player.giveItemStack(new ItemStack(this.getContent()))) {
                     player.dropItem(new ItemStack(this.getContent()), false);
                 }
                 world.setBlockState(pos, this.withAge(0), 2);
-                player.getMainHandStack().damage(1, player, (Consumer<LivingEntity>)((p)-> {
-                    p.sendToolBreakStatus(hand);
-                }));
+                player.getMainHandStack()
+                        .damage(1, player, (Consumer<LivingEntity>)
+                                ((p) -> {
+                                    p.sendToolBreakStatus(hand);
+                                }));
             }
             return ActionResult.success(world.isClient);
         }
         return ActionResult.CONSUME;
-
     }
 
     @Override
     public void randomTick(BlockState bs, ServerWorld world, BlockPos pos, Random rand) {
-        if(world.getBaseLightLevel(pos, 0) >= 9){
-
+        if (world.getBaseLightLevel(pos, 0) >= 9) {
             int currAge = this.getAge(bs);
+            if (currAge < this.getMaxAge()) {
 
-            if(currAge < this.getMaxAge()){
-
-                if(rand.nextInt((int) (10.0F) + 1 ) == 0){
+                if (rand.nextInt((int) (10.0F) + 1) == 0) {
 
                     world.setBlockState(pos, this.withAge(currAge + 1), 2);
                 }
