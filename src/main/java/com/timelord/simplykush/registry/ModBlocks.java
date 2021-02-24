@@ -9,6 +9,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
+
     public static final Block CLAY_POT = new Block(FabricBlockSettings
             .of(Material.BAMBOO)
             .breakByHand(true)

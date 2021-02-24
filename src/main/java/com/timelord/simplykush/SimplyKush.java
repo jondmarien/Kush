@@ -21,8 +21,8 @@ public class SimplyKush implements ModInitializer {
             () -> new ItemStack(ModItems.INDICA)
     );
 
-    public static final ItemGroup OTHER_TEST = FabricItemGroupBuilder.create(
-            new Identifier(MOD_ID, "other"))
+    public static final ItemGroup ALL_KUSH_ITEMS = FabricItemGroupBuilder.create(
+            new Identifier(MOD_ID, "kush"))
             .icon(() -> new ItemStack(Blocks.ENCHANTING_TABLE))
             .appendItems(itemStacks -> {
                 itemStacks.add(new ItemStack(ModBlocks.CLAY_POT));
