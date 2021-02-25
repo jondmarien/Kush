@@ -15,6 +15,8 @@ public class ModItems {
     public static final Item INDICA = new Item(new Item.Settings().group(SimplyKush.SIMPLY_KUSH));
     public static final Item ROLLING_TRAY = new Item(new Item.Settings().group(SimplyKush.SIMPLY_KUSH));
     public static final Item SCALE = new Item(new Item.Settings().group(SimplyKush.SIMPLY_KUSH));
+    public static final Item PLASTIC_BAGGY = new Item(new Item.Settings().group(SimplyKush.SIMPLY_KUSH));
+    public static final Item BAGGED_KUSH = new Item(new Item.Settings().group(SimplyKush.SIMPLY_KUSH));
 
     /**
      * Seeds
@@ -33,6 +35,8 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(SimplyKush.MOD_ID, "indica"), INDICA);
         Registry.register(Registry.ITEM, new Identifier(SimplyKush.MOD_ID, "rolling_tray"), ROLLING_TRAY);
         Registry.register(Registry.ITEM, new Identifier(SimplyKush.MOD_ID, "scale"), SCALE);
+        Registry.register(Registry.ITEM, new Identifier(SimplyKush.MOD_ID, "plastic_baggy"), PLASTIC_BAGGY);
+        Registry.register(Registry.ITEM, new Identifier(SimplyKush.MOD_ID, "bagged_kush"), BAGGED_KUSH);
 
         // Seeds
         Registry.register(Registry.ITEM, new Identifier(SimplyKush.MOD_ID, "seeds"), SEEDS);

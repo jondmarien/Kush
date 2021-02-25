@@ -1,0 +1,10 @@
+{
+  "inputA" : {
+    "item": "simplykush:plastic_baggy"
+  },
+  "inputB": {
+    "tag": "simplykush:sativa"
+  },
+  "outputItem": "simplykush:bagged_kush",
+  "outputAmount": "2"
+}
