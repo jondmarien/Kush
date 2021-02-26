@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Material;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.recipe.RecipeType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -19,9 +20,11 @@ public class SimplyKush implements ModInitializer {
 	
 	public static final PreparationDeskCrafterBlock PREPARATION_DESK_CRAFTER_BLOCK = new PreparationDeskCrafterBlock(FabricBlockSettings.of(Material.METAL));
 	
+	public static final RecipeType<PreparationDeskRecipe> RECIPE_TYPE = RecipeType.register("simplykush:preparation_desk_recipe_type");
+	
 	public static final ItemGroup SIMPLY_KUSH = FabricItemGroupBuilder.build(
 			new Identifier(MOD_ID, "general"),
-			() -> new ItemStack(ModItems.INDICA)
+			() -> new ItemStack(ModItems.BAGGED_KUSH)
 	);
 	
 /*	public static final ItemGroup TEST = FabricItemGroupBuilder.create(
@@ -39,8 +42,7 @@ public class SimplyKush implements ModInitializer {
 		ModItems.registerItems();
 		ModBlocks.registerBlocks();
 		ModStats.registerStats();
+		ModRecipes.registerRecipes();
 		
-		Registry.register(Registry.RECIPE_SERIALIZER, PreparationDeskRecipeSerializer.ID, PreparationDeskRecipeSerializer.INSTANCE);
-		Registry.register(Registry.RECIPE_TYPE, new Identifier(MOD_ID, PreparationDeskRecipe.Type.ID), PreparationDeskRecipe.Type.INSTANCE);
 	}
 }

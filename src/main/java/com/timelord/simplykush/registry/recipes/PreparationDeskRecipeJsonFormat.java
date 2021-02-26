@@ -5,6 +5,8 @@ import com.google.gson.JsonObject;
 public class PreparationDeskRecipeJsonFormat {
 	JsonObject inputA;
 	JsonObject inputB;
+	JsonObject inputC;
+	JsonObject inputD;
 	String outputItem;
 	int outputAmount;
 	
@@ -22,6 +24,22 @@ public class PreparationDeskRecipeJsonFormat {
 	
 	public void setInputB (JsonObject inputB) {
 		this.inputB = inputB;
+	}
+	
+	public JsonObject getInputC () {
+		return inputC;
+	}
+	
+	public void setInputC (JsonObject inputC) {
+		this.inputC = inputC;
+	}
+	
+	public JsonObject getInputD () {
+		return inputD;
+	}
+	
+	public void setInputD (JsonObject inputD) {
+		this.inputD = inputD;
 	}
 	
 	public String getOutputItem () {
