@@ -1,5 +1,6 @@
 package com.timelord.simplykush.registry.block;
 
+import com.timelord.simplykush.registry.ModStats;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -14,7 +15,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class PreparationDeskCrafterBlock extends Block {
-	private static final Text TITLE = new TranslatableText("container.preparation_desk_crafting");
+	private static final Text TITLE = new TranslatableText("block.simplykush.container.preparation_desk_crafting");
 	
 	public PreparationDeskCrafterBlock (Settings settings) {
 		super(settings);
@@ -26,12 +27,16 @@ public class PreparationDeskCrafterBlock extends Block {
 			return ActionResult.SUCCESS;
 		} else {
 			player.openHandledScreen(bs.createScreenHandlerFactory(world, pos));
-			player.incrementStat(Stats.INTERACT_WITH_CRAFTING_TABLE);
+			player.incrementStat(ModStats.INTERACT_WITH_PREPARATION_DESK);
 			return ActionResult.CONSUME;
 		}
 	}
+	
+	public boolean activate(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult result) {
+		return true;
+	}
     
-/*    public NamedScreenHandlerFactory creatreScreenHandlerFactory(BlockState bs, World world, BlockPos pos){
+/*    public NamedScreenHandlerFactory createScreenHandlerFactory(BlockState bs, World world, BlockPos pos){
         return new SimpleNamedScreenHandlerFactory((i, playerInventory, playerEntity) -> {
             return new PrepDeskCraftingScreenHandler(i, playerInventory, ScreenHandlerContext.create(world, pos));
         }, TITLE);

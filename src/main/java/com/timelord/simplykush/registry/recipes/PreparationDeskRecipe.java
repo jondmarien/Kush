@@ -1,19 +1,25 @@
-package com.timelord.simplykush.registry;
+package com.timelord.simplykush.registry.recipes;
 
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
+import com.sun.xml.internal.ws.server.AbstractMultiInstanceResolver;
 import net.minecraft.inventory.CraftingInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 
 public class PreparationDeskRecipe implements Recipe<CraftingInventory> {
+
+	
 	private final Ingredient inputA;
 	private final Ingredient inputB;
 	private final ItemStack outputStack;
 	private final Identifier id;
 	
-	public PreparationDeskRecipe (Identifier id, ItemStack output, Ingredient inputA, Ingredient inputB) {
+	public PreparationDeskRecipe (Ingredient inputA, Ingredient inputB, ItemStack output, Identifier id) {
 		this.id = id;
 		this.inputA = inputA;
 		this.inputB = inputB;
@@ -45,7 +51,7 @@ public class PreparationDeskRecipe implements Recipe<CraftingInventory> {
 	
 	@Override
 	public RecipeSerializer<?> getSerializer () {
-		return null;
+		return PreparationDeskRecipeSerializer.INSTANCE;
 	}
 	
 	@Override

@@ -7,5 +7,7 @@
   "item.simplykush.bagged_kush": "Bagged Kush",
   "item.simplykush.seeds": "Seeds",
   "block.simplykush.preparation_desk": "Preparation Desk",
-  "block.simplykush.clay_pot": "Clay Pot"
+  "block.simplykush.clay_pot": "Clay Pot",
+  "block.simplykush.container.preparation_desk_crafting": "Preparation Desk",
+  "stat.simplykush.interact_with_preparation_desk": "Interactions with Preparation Desk"
 }
