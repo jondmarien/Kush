@@ -4,6 +4,7 @@ import com.timelord.simplykush.registry.ModStats;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.*;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
@@ -11,6 +12,8 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+
+import java.util.Optional;
 
 public class PreparationDeskCrafterBlock extends Block {
 	private static final Text TITLE = new TranslatableText("block.simplykush.container.preparation_desk_crafting");
@@ -31,7 +34,9 @@ public class PreparationDeskCrafterBlock extends Block {
 	}
 	
 	public boolean activate (BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult result) {
-		return true;
+		if(!world.isClient()){
+		
+		}
 	}
     
 /*    public NamedScreenHandlerFactory createScreenHandlerFactory(BlockState bs, World world, BlockPos pos){
