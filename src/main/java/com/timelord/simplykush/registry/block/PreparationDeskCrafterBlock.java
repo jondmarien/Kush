@@ -37,6 +37,7 @@ public class PreparationDeskCrafterBlock extends Block {
 		if(!world.isClient()){
 		
 		}
+		return false;
 	}
     
 /*    public NamedScreenHandlerFactory createScreenHandlerFactory(BlockState bs, World world, BlockPos pos){

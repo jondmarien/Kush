@@ -11,7 +11,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import software.bernie.geckolib3.GeckoLib;
 
 
 public class SimplyKush implements ModInitializer {
@@ -44,5 +44,6 @@ public class SimplyKush implements ModInitializer {
 		ModStats.registerStats();
 		ModRecipes.registerRecipes();
 		
+		GeckoLib.initialize();
 	}
 }
