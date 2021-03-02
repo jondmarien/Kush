@@ -1,4 +1,4 @@
-name: Gradle Error Checker
+name: Gradle Error Checker v2
 
 on: [ push, pull_request ]
 jobs:
