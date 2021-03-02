@@ -1,8 +1,7 @@
 package com.timelord.simplykush.registry;
 
 import com.timelord.simplykush.SimplyKush;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -44,5 +43,9 @@ public class ModItems {
         // Block Items
         Registry.register(Registry.ITEM, new Identifier(SimplyKush.MOD_ID, "clay_pot"), CLAY_POT);
         Registry.register(Registry.ITEM, new Identifier(SimplyKush.MOD_ID, "preparation_desk"), PREPARATION_DESK);
+    }
+    
+    public static void registerItems(Item skitem) {
+        Registry.register(Registry.ITEM, new Identifier(SimplyKush.MOD_ID, "skitem"), skitem);
     }
 }
