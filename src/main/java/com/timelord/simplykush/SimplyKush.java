@@ -45,5 +45,7 @@ public class SimplyKush implements ModInitializer {
 		ModRecipes.registerRecipes();
 		
 		GeckoLib.initialize();
+		
+		//CrowdinTranslate.downloadTranslations("simplykush", MOD_ID);
 	}
 }

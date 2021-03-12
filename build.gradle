@@ -26,6 +26,11 @@ repositories {
 		url = "https://mod-buildcraft.com/maven"
 	}
 
+	maven {
+		name = "Crowdin Translation Library"
+		url = "https://minecraft.guntram.de/maven/"
+	}
+
 }
 
 dependencies {
@@ -45,6 +50,10 @@ dependencies {
 	//Alex IIl; libmultipart & libblockattributes
 	modCompile "alexiil.mc.lib:libmultipart-all:0.3.4"
 	modCompile "alexiil.mc.lib:libblockattributes-all:0.8.4"
+
+	//Crowdin
+	modImplementation "de.guntram.mcmod:crowdin-translate:1.2"
+	include "de.guntram.mcmod:crowdin-translate:1.2"
 }
 
 processResources {
